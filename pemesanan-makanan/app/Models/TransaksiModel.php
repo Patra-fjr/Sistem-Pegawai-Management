@@ -11,9 +11,10 @@ class TransaksiModel extends Model
     protected $allowedFields = [
         'no_invoice', 'user_id', 'tipe_order', 'nama_pelanggan', 'no_meja',
         'metode_bayar', 'subtotal', 'diskon', 'total', 'bayar', 'kembalian',
-        'promo_code', 'status', 'catatan'
+        'promo_code', 'status', 'catatan', 'created_at'
     ];
-    protected $useTimestamps = false;
+    protected $useTimestamps = true;
+    protected $updatedField  = '';
 
     public function generateInvoice()
     {
